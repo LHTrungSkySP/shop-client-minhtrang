@@ -1,0 +1,20 @@
+<div class="shadow-2 surface-card border-round h-full flex flex-column justify-content-between">
+  <div class="p-2 relative">
+    <span class="surface-card text-900 shadow-2 px-3 py-2 absolute" style="border-radius: 1.5rem; right: 1rem; top: 1rem">
+      {{data.badge}}
+    </span>
+    <img [src]="data.image" class="w-full object-cover h-20rem mb-3" />
+    <div class="px-4">
+      <h1 class="text-center text-3xl font-bold">{{data.title}}
+      </h1>
+      <p class="text-xl line-height-3 text-center font-italic min-h-5rem">
+        {{data.description}}
+      </p>
+    </div>
+  </div>
+  <div class="flex justify-content-center pb-4">
+    <a (click)="data.command()" class="btn font-bold text-center uppercase border-bottom-2 border-yellow-400 text-900 hover:text-yellow-400">
+      Xem thêm
+    </a>
+  </div>
+</div>

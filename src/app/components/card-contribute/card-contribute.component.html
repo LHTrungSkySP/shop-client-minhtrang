@@ -1,0 +1,14 @@
+<div class="shadow-2 surface-card h-full flex flex-column justify-content-between h-30rem ">
+  <div class="p-2 px-6 flex-1">
+    <h1 class="text-center text-5xl font-bold my-5 h-3">{{data.title}}</h1>
+    <p class="text-xl line-height-3 text-center font-italic min-h-5rem">
+      {{data.description}}
+    </p>
+  </div>
+  <div class="flex justify-content-center pb-6 ">
+    <p-button styleClass="uppercase font-bold hover:text-white px-5" label="THAM GIA NGAY" [rounded]="true" severity="warning" (click)="data.command()" />
+    <!-- <a (click)="data.command()" class="btn font-bold text-center uppercase border-bottom-2 border-yellow-400 text-900 hover:text-yellow-400">
+      Xem thêm
+    </a> -->
+  </div>
+</div>

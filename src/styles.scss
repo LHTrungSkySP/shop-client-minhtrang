@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+/* Layout */
+@import "assets/layout/styles/layout/layout.scss";
+
+/* PrimeNG */
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.scss";
+@import "../node_modules/primeicons/primeicons.css";
+:host ::ng-deep .p-menubar.p-submenu-list{
+  width: unset;
+}
+:host ::ng-deep .p-avatar.p-avatar-circle {
+  overflow: unset !important;
+}
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+.object-cover {
+  object-fit: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif;
+}
+// ẩn text quá dài trên n dòng
+.line-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+.text-wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// custom
+.min-h-7rem {
+  min-height: 7rem;
+}
+.min-h-5rem {
+  min-height: 5rem;
+}
+.btn {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.text-1em {
+  font-size: calc(0.5em + 2vw);
+}
+.text-2em {
+  font-size: calc(1.5em + 2vw);
+}
+.text-3em {
+  font-size: calc(2.5em + 2vw);
+}
+.h-30rem {
+  height: 30rem;;
+}
+.h-3 {
+  height: 30%;
+}
+
+.abc {
+  background-color: aqua;
+}
+.abc {
+  color: red;
+}

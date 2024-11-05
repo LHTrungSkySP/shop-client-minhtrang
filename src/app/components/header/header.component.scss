@@ -1,0 +1,10 @@
+:host ::ng-deep .p-menubar.p-component {
+  border: none;
+  background-color: unset;
+}
+.center-flex {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+}

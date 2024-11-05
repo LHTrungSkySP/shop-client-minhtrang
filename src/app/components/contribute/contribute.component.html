@@ -1,0 +1,8 @@
+<h1 class="font-normal mb-0 mx-auto text-2em text-center w-10">Đồng hành cùng chúng tôi</h1>
+<p class="text-xl mx-auto text-center w-10 my-3">
+  Cộng tác cùng chúng tôi để tiến xa hơn nữa, cùng nhau tạo nên thương hiệu gốm sứ uy tín, chất lượng</p>
+<div class="grid grid-nogutter pt-8">
+  <div class="col-12 md:col-6 lg:col-4 p-3" *ngFor="let option of optionContribute">
+    <lht-card-contribute [data]="option"></lht-card-contribute>
+  </div>
+</div>

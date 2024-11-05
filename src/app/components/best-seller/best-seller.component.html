@@ -1,0 +1,12 @@
+<h1 class="mx-auto w-10 text-center font-normal text-2em  my-8">Sản phẩm bán chạy nhất</h1>
+<p-carousel
+    [value]="products"
+    [numVisible]="3"
+    [numScroll]="3"
+    [circular]="true"
+    [responsiveOptions]="responsiveOptions"
+    autoplayInterval="3000">
+        <ng-template let-product pTemplate="item">
+          <lht-card-product class="m-2 block"></lht-card-product>
+        </ng-template>
+</p-carousel>
