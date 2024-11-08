@@ -10,6 +10,7 @@ import { GalleryCategoryModule } from '../gallery-category/gallery-category.modu
 import { BestSellerModule } from "../best-seller/best-seller.module";
 import { CardProductModule } from '../card-product/card-product.module';
 import { ContributeModule } from '../contribute/contribute.module';
+import { SupportCenterModule } from '../support-center/support-center.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContributeModule } from '../contribute/contribute.module';
     GalleryCategoryModule,
     BestSellerModule,
     CardProductModule,
-    ContributeModule
+    ContributeModule,
+    SupportCenterModule
 ]
 })
 export class HomeModule { }

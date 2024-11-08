@@ -36,7 +36,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     MultiSelectModule,
     RadioButtonModule,
     CalendarModule,
-    InputTextareaModule
+    InputTextareaModule,
   ]
 })
 export class CommonFormModule { }

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { GalleryItem, ImageItem } from 'ng-gallery';
 
 @Component({
   selector: 'lht-slide',
@@ -7,15 +6,14 @@ import { GalleryItem, ImageItem } from 'ng-gallery';
   styleUrl: './slide.component.scss'
 })
 export class SlideComponent {
-  images!: GalleryItem[];
+  images: any[] = [];
 
   ngOnInit() {
-    // Set items array
+    //   // Set items array
     this.images = [
-      new ImageItem({ src: 'assets/images/6.jpg', thumb: 'assets/images/6.jpg' }),
-      new ImageItem({ src: 'assets/images/tre_em.jpg', thumb: 'assets/images/tre_em.jpg' }),
-      new ImageItem({ src: 'assets/images/bat_dia_1.jpg', thumb: 'assets/images/bat_dia_1.jpg' }),
-
+      { src: 'assets/images/6.jpg', thumb: 'assets/images/6.jpg' },
+      { src: 'assets/images/tre_em.jpg', thumb: 'assets/images/tre_em.jpg' },
+      { src: 'assets/images/bat_dia_1.jpg', thumb: 'assets/images/bat_dia_1.jpg' },
     ];
   }
 }

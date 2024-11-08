@@ -1,8 +1,13 @@
 <div class="relative">
-  <gallery class="surface-ground" [items]="images" [bullets]="true" [bulletSize]="14"
-    [autoplay]="true" [loop]="true" autoplayInterval="3000"></gallery>
-  <div class="absolute-center w-12">
-    <h1 class="text-center text-3em text-black-alpha-70">GỐM SỨ MINH TRANG</h1>
-    <h1 class="text-center text-1em text-black-alpha-50">Phong cách! Phong cách! Yeah Yeahhh</h1>
+  <swiper-container class="mySwiper " space-between="30" pagination="true" pagination-clickable="true">
+    <swiper-slide *ngFor="let img of images; index as idx" class="half-height-width" style="width: 100% ;">
+      <div class="h-full flex justify-content-center bg-black-alpha-10">
+        <img [src]="img.src" alt="" class="h-full" style="object-fit: contain;">
+      </div>
+    </swiper-slide>
+  </swiper-container>
+  <div class="absolute-center">
+    <h1 class="text-center text-3em">GỐM SỨ MINH TRANG</h1>
+    <h1 class="text-center text-1em">Phong cách! Phong cách! Yeah Yeahhh</h1>
   </div>
 </div>

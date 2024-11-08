@@ -18,6 +18,13 @@
   z-index: 1;
   transform: translate(-50%, -50%);
 }
+.absolute-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  transform: translate(0%, -50%);
+}
 .object-cover {
   object-fit: cover;
 }
@@ -58,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: calc(1.5em + 2vw);
 }
 .text-3em {
-  font-size: calc(2.5em + 2vw);
+  font-size: calc(2em + 2vw);
 }
 .h-30rem {
   height: 30rem;;
@@ -66,10 +73,11 @@ h1, h2, h3, h4, h5, h6 {
 .h-3 {
   height: 30%;
 }
+.half-height-width {
+  width: 100%;            /* Chiều rộng theo yêu cầu */
+  aspect-ratio: 2 / 1;    /* Tỷ lệ 2:1 để chiều cao = 50% chiều rộng */
+}
+.logo-img{
+  height: calc(2em + 2vw);
+}
 
-.abc {
-  background-color: aqua;
-}
-.abc {
-  color: red;
-}

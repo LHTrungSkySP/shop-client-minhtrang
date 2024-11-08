@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SlideComponent } from './slide.component';
-import { GalleryModule} from 'ng-gallery';
 
 
 @NgModule({
@@ -10,10 +9,10 @@ import { GalleryModule} from 'ng-gallery';
   ],
   imports: [
     CommonModule,
-    GalleryModule,
   ],
   exports: [
     SlideComponent
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class SlideModule { }

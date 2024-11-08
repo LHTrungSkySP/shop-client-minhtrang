@@ -1,6 +1,6 @@
-<header class="bg-white py-5">
+<header class="bg-white py-5 relative">
   <div class="flex justify-content-center">
-    <img src="assets/images/logo_minhtrang.png" class="max-h-6rem" alt="">
+    <img src="assets/images/logo_minhtrang.png" class="logo-img" alt="">
     <!-- <div class="flex align-items-center gap-5">
       <div class="border-3 surface-border center-flex">
         <i class="text-4xl pi pi-shopping-cart" style="line-height: 3rem;"></i>
@@ -8,4 +8,5 @@
       <p-avatar badgeSize="large" pBadge value="4" label="P" styleClass="mr-5" size="large"/>
     </div> -->
   </div>
+  <p-button class="absolute-right sm:mr-4" [styleClass]="'border-0 w-5rem'" [outlined]="true" icon="pi pi-shopping-cart text-5xl text-900 px-4"></p-button>
 </header>

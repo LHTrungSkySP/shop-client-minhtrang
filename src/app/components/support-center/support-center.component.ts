@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './support-center.component.scss'
 })
 export class SupportCenterComponent {
+  onContact(){
 
+  }
 }

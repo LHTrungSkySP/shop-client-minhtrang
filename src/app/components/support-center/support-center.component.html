@@ -1,1 +1,52 @@
-<p>support-center works!</p>
+<h1 class="mx-auto w-10 text-center font-normal text-2em  my-8">Trung tâm hỗ trợ</h1>
+<div class="grid">
+  <div class="col-12 lg:col-6 pb-7 px-6 lg:px-0">
+    <div>
+      <div class="field grid">
+        <label class="col-4 mb-2 text-2xl" htmlfor="age1">Tên</label>
+        <div class="col-8">
+          <input pInputText id="name3" type="text" class="w-12">
+        </div>
+      </div>
+      <div class="field grid">
+        <label class="col-4 mb-2 text-2xl" htmlfor="age1">Số điện thoại/email</label>
+        <div class="col-8">
+          <input pInputText id="name3" type="text" class="w-12">
+        </div>
+      </div>
+      <div class="field grid">
+        <div class="col-12">
+          <textarea class="w-12" rows="8" pInputTextarea [autoResize]="true"></textarea>
+        </div>
+      </div>
+      <div class="text-right mb-3 w-12">
+        <p-button [outlined]="true" styleClass="uppercase font-bold hover:text-white px-5"
+        label="GỬI" [rounded]="true" severity="warning" (click)="onContact()" />
+      </div>
+    </div>
+    <p class="text-xl mx-auto text-center w-10">
+      Liên hệ với chúng tôi qua các kênh lạc sau để được hỗ trợ nhanh nhất
+    </p>
+    <div class="flex gap-2 justify-content-center text-center">
+      <p-button>
+        <i class="text-4xl pi pi-facebook"></i>
+      </p-button>
+      <p-button [outlined]="true" severity="danger">
+        <i class="text-4xl pi pi-instagram"></i>
+      </p-button>
+      <p-button  severity="warning">
+        <i class="text-4xl pi pi-youtube"></i>
+      </p-button>
+      <p-button severity="info">
+        <i class="text-4xl pi pi-telegram"></i>
+      </p-button>
+    </div>
+  </div>
+  <div class="col-12 lg:col-6 pb-7">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2877.2816462471355!2d105.8564861266304!3d21.02786347246813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abeae47b7d49%3A0xa1ef04051d6282c7!2zVMaw4bujbmcgxJDDoGkgVnVhIEzDvSBUaMOhaSBU4buV!5e1!3m2!1svi!2s!4v1731069561880!5m2!1svi!2s"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </div>
+</div>
