@@ -1,12 +1,12 @@
 <div class="relative">
-  <swiper-container class="mySwiper " space-between="30" pagination="true" pagination-clickable="true">
+  <swiper-container class="mySwiper z-0" space-between="30" pagination="true" pagination-clickable="true">
     <swiper-slide *ngFor="let img of images; index as idx" class="half-height-width" style="width: 100% ;">
       <div class="h-full flex justify-content-center bg-black-alpha-10">
         <img [src]="img.src" alt="" class="h-full" style="object-fit: contain;">
       </div>
     </swiper-slide>
   </swiper-container>
-  <div class="absolute-center">
+  <div class="absolute-center z-0">
     <h1 class="text-center text-3em">GỐM SỨ MINH TRANG</h1>
     <h1 class="text-center text-1em">Phong cách! Phong cách! Yeah Yeahhh</h1>
   </div>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SupportCenterComponent } from './support-center.component';
-import { CommonFormModule } from '../../shared/common-form/common-form.module';
+import { CommonFormModule } from '../../../shared/common-form/common-form.module';
 
 
 

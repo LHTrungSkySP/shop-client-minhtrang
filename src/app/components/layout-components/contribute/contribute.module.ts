@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContributeComponent } from './contribute.component';
-import { CardContributeModule } from '../card-contribute/card-contribute.module';
+import { CardContributeModule } from '../../model-components/card-contribute/card-contribute.module';
 
 
 

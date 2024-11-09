@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardProductComponent } from './card-product.component';
-import { PipeModule } from '../../shared/pipes/pipe.module';
 import { RippleModule } from 'primeng/ripple';
+import { PipeModule } from '../../../shared/pipes/pipe.module';
 
 @NgModule({
   declarations: [

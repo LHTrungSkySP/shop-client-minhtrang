@@ -5,14 +5,19 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
   {
     path: '',
+    // component: AppComponent,
     children: [
       {
         path: 'home',
-        loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)
+        loadChildren: () => import('./components/layout-components/home/home.module').then(m => m.HomeModule)
       },
       {
         path: '',
-        loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)
+        loadChildren: () => import('./components/layout-components/home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path: ':product',
+        loadChildren: () => import('./components/layout-components/product-home/product-home.module').then(m => m.ProductHomeModule)
       }
     ]
   }

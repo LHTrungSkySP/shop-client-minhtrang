@@ -1,4 +1,5 @@
 <header class="bg-white py-5 relative">
+  <p-menubar baseZIndex="1" class="absolute-left sm:ml-4" [styleClass]="'text-xl'" [model]="items" />
   <div class="flex justify-content-center">
     <img src="assets/images/logo_minhtrang.png" class="logo-img" alt="">
     <!-- <div class="flex align-items-center gap-5">
@@ -8,5 +9,5 @@
       <p-avatar badgeSize="large" pBadge value="4" label="P" styleClass="mr-5" size="large"/>
     </div> -->
   </div>
-  <p-button class="absolute-right sm:mr-4" [styleClass]="'border-0 w-5rem'" [outlined]="true" icon="pi pi-shopping-cart text-5xl text-900 px-4"></p-button>
+  <p-button class="absolute-right sm:mr-4 z-0" [styleClass]="'border-0 w-5rem'" [outlined]="true" icon="pi pi-shopping-cart text-5xl text-900 px-4"></p-button>
 </header>

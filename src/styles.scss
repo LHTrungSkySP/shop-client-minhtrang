@@ -5,33 +5,37 @@
 @import "../node_modules/primeng/resources/primeng.min.css";
 @import "../node_modules/primeflex/primeflex.scss";
 @import "../node_modules/primeicons/primeicons.css";
-:host ::ng-deep .p-menubar.p-submenu-list{
+
+//custom theme
+.p-menubar.p-submenu-list {
   width: unset;
 }
-:host ::ng-deep .p-avatar.p-avatar-circle {
+.p-avatar.p-avatar-circle {
   overflow: unset !important;
 }
-.absolute-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -50%);
+.p-menubar-root-list {
+  width: max-content !important;
 }
-.absolute-right {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  z-index: 1;
-  transform: translate(0%, -50%);
+.p-element.p-icon-wrapper {
+  margin-left: 2px;
 }
+.p-ripple.p-element.p-menuitem-link {
+  justify-content: space-between;
+}
+
 .object-cover {
   object-fit: cover;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Roboto, sans-serif;
 }
+
 // ẩn text quá dài trên n dòng
 .line-clamp-1 {
   -webkit-line-clamp: 1;
@@ -40,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 .line-clamp-2 {
   -webkit-line-clamp: 2;
 }
+
 .text-wrap {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -51,33 +56,68 @@ h1, h2, h3, h4, h5, h6 {
 .min-h-7rem {
   min-height: 7rem;
 }
+
 .min-h-5rem {
   min-height: 5rem;
 }
+
 .btn {
   padding: 0.5rem;
   cursor: pointer;
 }
+
 .text-1em {
   font-size: calc(0.5em + 2vw);
 }
+
 .text-2em {
   font-size: calc(1.5em + 2vw);
 }
+
 .text-3em {
   font-size: calc(2em + 2vw);
 }
+
 .h-30rem {
-  height: 30rem;;
+  height: 30rem;
+  ;
 }
+
 .h-3 {
   height: 30%;
 }
+
 .half-height-width {
-  width: 100%;            /* Chiều rộng theo yêu cầu */
-  aspect-ratio: 2 / 1;    /* Tỷ lệ 2:1 để chiều cao = 50% chiều rộng */
+  width: 100%;
+  /* Chiều rộng theo yêu cầu */
+  aspect-ratio: 2 / 1;
+  /* Tỷ lệ 2:1 để chiều cao = 50% chiều rộng */
 }
-.logo-img{
+
+.logo-img {
   height: calc(2em + 2vw);
 }
 
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+.absolute-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  transform: translate(0%, -50%);
+}
+
+.absolute-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translate(0%, -50%);
+}
