@@ -1,0 +1,7 @@
+<p-button [outlined]="true" (onClick)="changeToggleSelected()">
+  <p>{{label ? label + '&nbsp;' : ''}}  <ng-container [ngSwitch]="toggle">
+    <i *ngSwitchCase="TOGGLE_STATUSES.DOWN" class="pi pi-sort-amount-down-alt"></i>
+    <i *ngSwitchCase="TOGGLE_STATUSES.UP" class="pi pi-sort-amount-up-alt"></i>
+    <i *ngSwitchDefault class="pi pi-sort-alt"></i>
+  </ng-container></p>
+</p-button>
