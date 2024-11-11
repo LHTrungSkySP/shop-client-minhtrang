@@ -1,0 +1,26 @@
+<div class="shadow-2 surface-card border-round h-full flex flex-column justify-content-between">
+    <div class="p-2">
+        <p-image [src]="data.image" [previewImageSrc]="data.image" alt="Image"
+            [imageClass]="'w-full object-cover h-12rem '" [preview]="true" />
+        <div (click)="data.onClick()" class="cursor-pointer">
+            <h1 class="text-center text-base font-bold my-2">{{data.name}}
+            </h1>
+            <div class="flex gap-1">
+                <b class="text-xl line-height-3 text-center min-h-2rem text-red-500">
+                    {{data.price | currencyFormat}}{{data.currency}}
+                </b>
+                <span class="line-through font-italic">
+                    {{data.price | currencyFormat}} {{data.currency}}
+                </span>
+            </div>
+        </div>
+        <div class="flex justify-content-between align-items-center">
+            <p-rating [readonly]="true" [(ngModel)]="data.rate" [cancel]="false" />
+            <button type="button" pRipple (click)="data.onClickHoverBtn()"
+                class="border-1 border-white border-round py-2 px-3 bg-black-alpha-30 
+                text-white inline-flex align-items-center justify-content-center hover:bg-black-alpha-40 transition-colors transition-duration-300 cursor-pointer">
+                <i class="pi pi-shopping-cart text-base"></i>
+            </button>
+        </div>
+    </div>
+</div>
