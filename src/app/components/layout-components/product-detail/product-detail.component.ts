@@ -20,10 +20,10 @@ export class ProductDetailComponent {
 
   ngOnInit(): void {
     this.images = [
-        'assets/images/Screenshot_1.png',
-        'assets/images/Screenshot_1.png',
-        'assets/images/Screenshot_1.png',
-        'assets/images/Screenshot_1.png'
+        'assets/images/1.jpg',
+        'assets/images/1.jpg',
+        'assets/images/1.jpg',
+        'assets/images/1.jpg'
     ];
   }
 }

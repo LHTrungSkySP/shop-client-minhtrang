@@ -1,29 +1,32 @@
 
-<div class="xl:w-7 sm:w-12 mx-auto block">
-  <div class="card ">
+<div class="card xl:w-7 sm:w-12 mx-auto block my-3">
+  <!-- <div class=" "> -->
     <div class="grid mb-7">
-        <div class="col-12 lg:col-7">
-            <div class="flex">
-                <div class="flex flex-column w-2 justify-content-between" style="row-gap: 1rem;">
-                    <img *ngFor="let image of images; let i = index" [ngClass]="{'border-primary': selectedImageIndex === i}" src="{{image}}" class="w-full cursor-pointer border-2 border-transparent transition-colors transition-duration-150 border-round" (click)="selectedImageIndex = i"/>
-                </div>
-                <div class="pl-3 w-10 flex">
-                    <img src="assets/images/Screenshot_1.png" class="w-full border-2 border-transparent border-round"/>
-                </div>
-            </div>
+        <div class="col-12 lg:col-7 flex">
+            <!-- <div class=""> -->
+              <p-galleria
+              [value]="images"
+              [thumbnailsPosition]="'left'"
+              [numVisible]="5">
+                  <ng-template pTemplate="item" let-item>
+                      <img
+                          [src]="item"
+                          style="width: 100%; min-height: 420px; display: block;" />
+                  </ng-template>
+                  <ng-template pTemplate="thumbnail" let-item>
+                      <div class="grid grid-nogutter justify-content-center">
+                          <img [src]="item" />
+                      </div>
+                  </ng-template>
+          </p-galleria>
+            <!-- </div> -->
         </div>
         <div class="col-12 lg:col-4 py-3 lg:pl-6">
             <div class="flex align-items-center text-xl font-medium text-900 mb-4">Product Title Placeholder</div>
             <div class="flex align-items-center justify-content-between mb-5">
                 <span class="text-900 font-medium text-3xl block">$120</span>
                 <div class="flex align-items-center">
-                    <span class="mr-3">
-                        <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
-                        <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
-                        <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
-                        <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
-                        <i class="pi pi-star text-600 mr-1"></i>
-                    </span>
+                    <lht-rating [value]="3"></lht-rating>
                     <span class="text-sm"><b class="text-900 mr-1">24</b> <span class="text-500"></span>reviews</span>
                 </div>
             </div>
@@ -169,6 +172,6 @@
             </div>
         </p-tabPanel>
     </p-tabView>
-  </div>
+  <!-- </div> -->
 
 </div>
