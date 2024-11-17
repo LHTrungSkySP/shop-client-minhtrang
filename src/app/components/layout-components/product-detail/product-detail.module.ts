@@ -10,6 +10,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { RatingModule } from '../../model-components/rating/rating.module';
 import { GalleriaModule } from 'primeng/galleria';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { PipeModule } from '../../../shared/pipes/pipe.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 		ButtonModule,
 		RippleModule,ReactiveFormsModule,
 		TabViewModule,
+    PipeModule,
     RatingModule,GalleriaModule,RadioButtonModule,
     RouterModule.forChild([
       {

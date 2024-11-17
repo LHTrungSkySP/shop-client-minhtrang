@@ -1,0 +1,6 @@
+<div class="relative" [style.width]="size.value + size.unit" [style.height]="size.value + size.unit">
+  <canvas #countdownCanvas width="10" height="10"></canvas>
+  <div [style.color]="active ? bgCountColor : bgCompleteColor" class="absolute align-items-center flex h-full justify-content-center responsive-text text-center top-0 w-full" style="transform: translateY(2%);">
+    <span>{{title}}</span>
+  </div>
+</div>
