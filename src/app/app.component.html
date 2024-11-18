@@ -1,3 +1,28 @@
-<lht-header></lht-header>
+<!-- <lht-header></lht-header>
 <router-outlet />
-<lht-support-center class="xl:w-8 sm:w-12 mx-auto block"></lht-support-center>
+<lht-support-center class="xl:w-8 sm:w-12 mx-auto block"></lht-support-center> -->
+<!-- <lht-a-component-test [input2]="data2" [input]="data"></lht-a-component-test> -->
+<lht-countdown-doughnut [processedTime]="900" [endCount]="3933" [(active)]="active"></lht-countdown-doughnut>
+ <lht-countdown-timer [startCount]="3933" [(active)]="active"></lht-countdown-timer>
+<button (click)="toggleCountDown()">sdf</button>
+<!-- @Input() startCount = 0;
+/**
+ * end countDown
+ */
+@Input() endCount = 60;
+/**
+ * active count
+ */
+@Input() active = true;
+/**
+ * size of height + width
+ */
+@Input() size: Size = {
+  value: 200,
+  unit: 'px'
+}
+@Input() cutout = 75;
+title = '';
+
+@Input() bgCountColor = 'green';
+@Input() bgCompleteColor = '#dfe7ef'; -->

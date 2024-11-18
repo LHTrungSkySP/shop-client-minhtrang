@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CountdownDoughnutComponent } from './countdown-doughnut.component';
-
+import { ChartModule } from 'primeng/chart';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { CountdownDoughnutComponent } from './countdown-doughnut.component';
     CountdownDoughnutComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ChartModule
   ],
   exports: [
     CountdownDoughnutComponent
