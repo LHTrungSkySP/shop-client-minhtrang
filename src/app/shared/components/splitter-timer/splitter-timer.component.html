@@ -1,0 +1,21 @@
+<div class="flex align-items-center gap-2">
+
+  <div class="flex flex-column align-items-center bg-blue-50 p-2 border-round">
+    <span class="text-4xl font-bold text-red-500 lh-full">{{hours}}</span>
+    <span class="text-sm text-600 lh-full">Giờ</span>
+  </div>
+  <div class="text-4xl font-bold">:</div>
+
+  <div class="flex flex-column align-items-center bg-blue-50 p-2 border-round">
+    <span class="text-4xl font-bold text-red-500 lh-full">{{minutes}}</span>
+    <span class="text-sm text-600 lh-full">Phút</span>
+  </div>
+  <div class="text-4xl font-bold">:</div>
+
+
+  <div class="flex flex-column align-items-center bg-blue-50 p-2 border-round">
+    <span class="text-4xl font-bold text-red-500 lh-full">{{seconds}}</span>
+    <span class="text-sm text-600 lh-full">Giây</span>
+  </div>
+</div>
+<button (click)="incrementSecond()">Increment</button>

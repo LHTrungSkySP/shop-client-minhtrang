@@ -1,0 +1,24 @@
+.time-display {
+    font-size: 48px;
+    font-weight: 500;
+    color: #4a4a4a;
+    text-align: center;
+    padding: 20px 30px;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    width: 250px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    outline: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  .time-display:focus {
+    border-color: #d0d0d0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  /* Tùy chỉnh màu của con trỏ nếu muốn */
+  .time-display {
+    caret-color: #4a4a4a; /* Màu của con trỏ sẽ giống màu text */
+  }

@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CountdownTimerComponent } from './countdown-timer.component';
-
+import { FormsModule } from '@angular/forms';
+import { InputMaskModule } from 'primeng/inputmask';
+import { ButtonModule } from 'primeng/button';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -9,7 +12,11 @@ import { CountdownTimerComponent } from './countdown-timer.component';
     CountdownTimerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    InputMaskModule,
+    ButtonModule,
+    ReactiveFormsModule
   ],
   exports: [
     CountdownTimerComponent

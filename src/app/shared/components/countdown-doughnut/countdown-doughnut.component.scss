@@ -1,0 +1,10 @@
+.responsive-text {
+  font-size: clamp(12px, 5vw, 36px);
+}
+canvas {
+  transform: scaleX(-1);
+}
+
+.chart-title {
+  transform: translate(-50%, -50%) scaleX(-1);
+}

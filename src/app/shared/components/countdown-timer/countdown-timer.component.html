@@ -1,5 +1,67 @@
-<div class="border-1 surface-border w-min p-3 border-round-xl">
-  <span class="font-medium text-6xl">
-      {{ ('0' + hourView).slice(-2) + ':' + ('0' + minuteView).slice(-2) + ':' + ('0' + secondView).slice(-2) }}
-  </span>
+<div [ngSwitch]="true">
+    <!-- Default Style -->
+    <div *ngSwitchDefault class="w-full p-3 border-round-xl relative text-center" [class.border-1]="isBorder" [class.surface-border]="isBorder">
+        <span *ngIf="showHour" (click)="onShowCustom()" [class]="classContent">
+            {{ ('0' + hourView).slice(-2) + ':' + ('0' + minuteView).slice(-2) + ':' + ('0' + secondView).slice(-2) }}
+        </span>
+        <span *ngIf="!showHour" (click)="onShowCustom()" [class]="classContent">
+            {{ ('0' + minuteView).slice(-2) + ':' + ('0' + secondView).slice(-2) }}
+        </span>
+        <div *ngIf="showCustomValue && showHour" class="absolute top-0 right-0 bottom-0 left-0 p-3 flex">
+            <p-inputMask [autoFocus]="true" (onBlur)="onBlur()" mask="99:99:99" (onComplete)="setCustomTime()" placeholder="00:00:00"
+                class="w-full" [(ngModel)]="customValue"
+                [styleClass]="'border-0 p-0 w-full h-full ' + classContent"></p-inputMask>
+        </div>
+        <div *ngIf="showCustomValue && !showHour" class="absolute top-0 right-0 bottom-0 left-0 p-3 flex">
+            <p-inputMask [autoFocus]="true" (onBlur)="onBlur()" mask="99:99" (onComplete)="setCustomTime()" placeholder="00:00" class="w-full"
+                [(ngModel)]="customValue"
+                [styleClass]="'border-0 p-0 w-full h-full ' + classContent"></p-inputMask>
+        </div>
+    </div>
+
+    <!-- Custom Style -->
+    <div *ngSwitchCase="standbyTimer" class="relative text-blue-700">
+        <span *ngIf="showHour" (click)="onShowCustom()" class="font-semibold text-2xl" [class]="classContent">
+            {{ (dayView > 0 ? dayView + ':' : '') + (hourView) + ':' + ('0' + minuteView).slice(-2) + ':' + ('0' + secondView).slice(-2) }}
+        </span>
+        <span *ngIf="!showHour" (click)="onShowCustom()" class="font-semibold text-2xl" [class]="classContent">
+            {{ ('0' + minuteView).slice(-2) + ':' + ('0' + secondView).slice(-2) }}
+        </span>
+    </div>
+
+    <!-- Flip Timer -->
+    <div *ngSwitchCase="flipTimer" class="flex gap-1 justify-content-center">
+        <!-- Days -->
+        <div class="flex flex-column align-items-center" *ngIf="showHour">
+            <div class="bg-white px-3 py-2 border-round-lg shadow-1 flex flex-column align-items-center">
+                <span class="text-4xl font-bold">{{ ('0' + dayView).slice(-2) }}</span>
+                <span class="text-sm mt-1">Ngày</span>
+            </div>
+            
+        </div>
+        <span class="flex text-4xl font-light align-items-center" *ngIf="showHour">:</span>
+        <!-- Hours -->
+        <div class="flex flex-column align-items-center">
+            <div class="bg-white px-3 py-2 border-round-lg shadow-1 flex flex-column align-items-center">
+                <span class="text-4xl font-bold">{{ ('0' + hourView).slice(-2) }}</span>
+                <span class="text-sm mt-1">Giờ</span>
+            </div>
+        </div>
+        <span class="flex text-4xl font-light align-items-center">:</span>
+        <!-- Minutes -->
+        <div class="flex flex-column align-items-center">
+            <div class="bg-white px-3 py-2 border-round-lg shadow-1 flex flex-column align-items-center">
+                <span class="text-4xl font-bold">{{ ('0' + minuteView).slice(-2) }}</span>
+                <span class="text-sm mt-1">Phút</span>
+            </div>
+        </div>
+        <span class="flex text-4xl font-light align-items-center">:</span>
+        <!-- Seconds -->
+        <div class="flex flex-column align-items-center">
+            <div class="bg-white px-3 py-2 border-round-lg shadow-1 flex flex-column align-items-center">
+                <span class="text-4xl font-bold">{{ ('0' + secondView).slice(-2) }}</span>
+                <span class="text-sm mt-1">Giây</span>
+            </div>
+        </div>
+    </div>
 </div>

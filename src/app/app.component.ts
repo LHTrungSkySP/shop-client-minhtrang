@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CountdownDoughnutComponent } from './shared/components/countdown-doughnut/countdown-doughnut.component';
+import { SplitterTimerComponent } from './shared/components/splitter-timer/splitter-timer.component';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit{
-  data = 0;
-  data2 = 0;
+export class AppComponent implements OnInit {
+
+  constructor() {
+
+  }
   ngOnInit(): void {
-    this.data = 5;
-    this.data2 = 15;
+    console.log("ngOnInit");
   }
-  toggleCountDown(){
-    this.active = !this.active;
-  }
-  active = false;
 }
