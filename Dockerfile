@@ -10,13 +10,13 @@ RUN npm install --force
 COPY . .
 
 # Build Angular app (output: dist/)
-RUN npm run build admin-fe -- --configuration production
+RUN npm run build gomsu -- --configuration production
 
 # Stage 2: Nginx serve
 FROM nginx:1.27-alpine
 
 # Copy file build ra nginx
-COPY --from=build /app/dist/admin-fe/browser/ /usr/share/nginx/html
+COPY --from=build /app/dist/gomsu/browser/ /usr/share/nginx/html
 
 # Copy file cấu hình nginx nếu cần (ví dụ SPA router fallback)
 COPY nginx.conf /etc/nginx/conf.d/default.conf
